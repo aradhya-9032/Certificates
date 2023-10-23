@@ -1,0 +1,82 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.topic-list {
+    list-style: none;
+    padding: 0;
+}
+
+.topic {
+    background-color: #f0f0f0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.topic:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.subtopics {
+    display: none;
+    list-style: disc;
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+.subtopics li {
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.subtopics li:hover {
+    color: #e74c3c;
+}
+
+/* Add this CSS to show and hide subtopics on click */
+.active .subtopics {
+    display: block;
+}
+
+/* Media query for screens smaller than 768px (typical mobile devices) */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    .topic {
+        padding: 8px;
+    }
+
+    .subtopics li {
+        font-size: 14px;
+    }
+}
